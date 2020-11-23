@@ -2,7 +2,7 @@ package ua.edu.ucu.collections.immutable;
 
 import java.util.Arrays;
 
-public class ImmutableLinkedList implements ImmutableList{
+public class ImmutableLinkedList implements ImmutableList {
 
     private Node head;
     private int size;
@@ -42,8 +42,8 @@ public class ImmutableLinkedList implements ImmutableList{
 
     @Override
     public ImmutableList add(int index, Object e) {
-        Object [] e2 = {e};
-        return addAll(index, e2);
+        Object [] element = {e};
+        return addAll(index, element);
     }
 
     @Override
