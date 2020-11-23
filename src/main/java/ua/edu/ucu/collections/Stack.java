@@ -9,18 +9,25 @@ public class Stack {
         this.items = new ImmutableLinkedList();
     }
 
+    public Stack(ImmutableLinkedList items){
+        this.items = items;
+    }
+
     public Object peek(){
         return items.getFirst();
     }
 
     public Object pop(){
+        Object peek = items.getFirst();
         items = items.removeFirst();
-        return items.getFirst();
+        return peek;
     }
 
     public void push(Object e){
         items = items.addFirst(e);
     }
 
-
+    public ImmutableLinkedList getItems() {
+        return items;
+    }
 }

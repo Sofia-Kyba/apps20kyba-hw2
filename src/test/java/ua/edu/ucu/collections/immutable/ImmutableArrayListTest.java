@@ -9,9 +9,8 @@ public class ImmutableArrayListTest {
     public void testMethodAdd() {
         Integer [] intArray = {1, 5};
         ImmutableArrayList elements = new ImmutableArrayList(intArray);
-        ImmutableArrayList newElements = (ImmutableArrayList) elements.add(3);
+        String actualResult = elements.add(3).toString();
         String expectedResult = "[1, 5, 3]";
-        String actualResult = newElements.toString();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -63,7 +62,7 @@ public class ImmutableArrayListTest {
         Integer [] intArray = {1, 5, 0, 7, 8};
         ImmutableArrayList elements = new ImmutableArrayList(intArray);
         String actualResult = elements.remove(2).toString();
-        Object expectedResult = "[1, 5, 7, 8]";
+        String expectedResult = "[1, 5, 7, 8]";
         assertEquals(expectedResult, actualResult);
     }
 
@@ -72,7 +71,7 @@ public class ImmutableArrayListTest {
         Integer [] intArray = {1, 1, 1, 7};
         ImmutableArrayList elements = new ImmutableArrayList(intArray);
         String actualResult = elements.set(3, 1).toString();
-        Object expectedResult = "[1, 1, 1, 1]";
+        String expectedResult = "[1, 1, 1, 1]";
         assertEquals(expectedResult, actualResult);
     }
 
@@ -106,6 +105,14 @@ public class ImmutableArrayListTest {
         ImmutableArrayList elements = new ImmutableArrayList(intArray);
         int actualResult = elements.size();
         int expectedResult = 6;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testMethodSize2() {
+        ImmutableArrayList elements = new ImmutableArrayList();
+        int actualResult = elements.size();
+        int expectedResult = 0;
         assertEquals(expectedResult, actualResult);
     }
 
