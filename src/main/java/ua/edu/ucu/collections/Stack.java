@@ -5,7 +5,7 @@ import ua.edu.ucu.collections.immutable.ImmutableLinkedList;
 public class Stack {
     private ImmutableLinkedList items;
 
-    public Stack(){
+    public Stack() {
         this.items = new ImmutableLinkedList();
     }
 
@@ -13,11 +13,11 @@ public class Stack {
         this.items = items;
     }
 
-    public Object peek(){
+    public Object peek() {
         return items.getFirst();
     }
 
-    public Object pop(){
+    public Object pop() {
         Object peek = items.getFirst();
         items = items.removeFirst();
         return peek;

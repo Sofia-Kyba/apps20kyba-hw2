@@ -13,7 +13,7 @@ public final class ImmutableArrayList implements ImmutableList {
     }
 
     public ImmutableArrayList(Object [] e) {
-        this.array = e;
+        this.array = e.clone();
         this.arraySize = e.length;
     }
 
